@@ -1,5 +1,10 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
+# Find Eigen
+find_package(Eigen3 REQUIRED)
+include_directories(${EIGEN3_INCLUDE_DIRS})
+
+
 # Find Gazebo
 find_package(gazebo REQUIRED)
 include_directories(${GAZEBO_INCLUDE_DIRS})
